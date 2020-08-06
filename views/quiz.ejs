@@ -1,4 +1,4 @@
-<head>
+<!-- <head>
     <title>Quiz</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
@@ -17,8 +17,8 @@
             <span class="option2"></span>
         </label>
         
-        <!-- Buttons -->
-        <div class="controls">
+        
+         <div class="controls">
             <button class="previous">Previous</button>
             <button class="next">Next</button>
         </div>
@@ -27,4 +27,31 @@
     <div class="result">
 
     </div>
-</body>
+</body> --> 
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3"><i class="fas fa-user-plus"></i> Quiz</h1>
+        
+        <form action="/quiz" method="POST">
+            <H1>Do you want a pet to love and care for?</H1>
+          <div class="form-group">
+            
+            <input type="radio" name="option1" value="1">
+            <span class="option1">Yes</span>
+            <input type="radio" name="option2" value="1">
+            <span class="option2">No</span>
+            
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-block">
+            Next
+          </button>
+          <button type="submit" class="btn btn-primary btn-block">
+            Back
+          </button>
+        </form>
+        
+      </div>
+    </div>
+  </div>

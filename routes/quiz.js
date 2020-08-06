@@ -1,13 +1,21 @@
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcryptjs');
-const passport = require('passport');
+
 //User model
-const User = require('../models/User');
-const { db } = require('../models/User');
+const Quiz = require('../models/Quiz');
+const { db } = require('../models/Quiz');
 
 router.get('/quiz',(req, res) => res.render('Quiz'));
+//Login Page
+router.get('/login', (req, res) => res.render('Login'));
 
+//Register Page
+router.get('/register', (req, res) => res.render('Register'));
+
+
+
+//Update Page
+router.get('/update',(req, res) => res.render('Update'));
 // QUESTIONS
 router.post('/quiz', (req,res) =>{
 const questions = [
@@ -68,7 +76,7 @@ let score = [];
 let selectedAnswersData = [];
 const totalQuestions =questions.length;
 
-const container = document.querySelector('.quiz-container');
+const container = document.quer;
 const questionEl = document.querySelector('.question');
 const option1 = document.querySelector('.option1');
 const option2 = document.querySelector('.option2');
