@@ -10,7 +10,8 @@ res.render('dashboard',{
     name: req.user.name
 }));
 
-router.get('/register', (req, res) => res.render('register'));
+router.get('/users/register', (req, res) => res.render('register'));
+router.get('/users/login', (req, res) => res.render('register'));
 
 
 router.get('/users/update', ensureAuthenticated, (req, res) =>
