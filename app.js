@@ -21,6 +21,7 @@ mongoose.connect(process.env.MONGODB_URI || db, {useUnifiedTopology: true, useNe
 //EJS
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views')
 
 //Bodyparser
 app.use(express.urlencoded({extended: false}));
@@ -49,8 +50,8 @@ app.use((req,res,next) =>{
 });
 
 //Routes
-app.use('/', require('./routes/index'));
-app.use('/users', require('./routes/users'));
+app.use('/', require('./routes/index.js'));
+app.use('/users', require('./routes/users.js'));
 
 const PORT = process.env.PORT || 8080;
 
